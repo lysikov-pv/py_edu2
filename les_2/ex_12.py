@@ -69,3 +69,11 @@ expected_result = [1, 9]
 actual_result = gues_enum(s, p)
 print('\nТест 5')
 print(f'Результат: {actual_result}. Результат верен: {actual_result == expected_result}')
+
+# Тест 6
+s = 2000
+p = 1000000
+expected_result = [1000, 1000]
+actual_result = gues_enum(s, p)
+print('\nТест 5')
+print(f'Результат: {actual_result}. Результат верен: {actual_result == expected_result}')
