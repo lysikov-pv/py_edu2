@@ -22,23 +22,30 @@ def max_harvest(lst):
         if sum > max: max = sum
     return max
 
+def max_harvest2(lst):
+    max = 0
+    for i in range(-1, len(lst)-1):
+        sum = lst[i-1] + lst[i] + lst[i+1]
+        if sum > max: max = sum
+    return max
+
 # Тест 1
 lst = [1, 2, 3, 4]
 expected_result = 9
-actual_result = max_harvest(lst)
+actual_result = max_harvest2(lst)
 print('\nТест 1')
 print(f'Результат: {actual_result}. Результат верен: {actual_result == expected_result}') 
 
 # Тест 2
 lst = [2, 1, 5, 4]
 expected_result = 11
-actual_result = max_harvest(lst)
+actual_result = max_harvest2(lst)
 print('\nТест 2')
 print(f'Результат: {actual_result}. Результат верен: {actual_result == expected_result}') 
 
 # Тест 3
 lst = [3, 4, 1, 2]
 expected_result = 9
-actual_result = max_harvest(lst)
+actual_result = max_harvest2(lst)
 print('\nТест 3')
 print(f'Результат: {actual_result}. Результат верен: {actual_result == expected_result}') 
